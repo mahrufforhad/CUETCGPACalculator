@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -52,12 +54,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-teal-500 rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-lg">C</span>
-              </div>
-              <span className="text-xl font-semibold text-slate-800">CGPA Calculator</span>
+              <Link href="/">
+                <Image 
+                  src="/logo.png" 
+                  alt="CUET Logo" 
+                  width={32} 
+                  height={40}
+                  className="object-contain cursor-pointer hover:opacity-80 transition-opacity"
+                />
+              </Link>
+              <span className="text-xl font-bold text-slate-800">CGPA Calculator</span>
             </div>
-            <button className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-2.5 rounded-xl font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+            <button className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-1.5 rounded-xl font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
               Get Started
             </button>
           </div>

@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --surface-primary: 255, 255, 255;
+  --surface-secondary: 249, 249, 249;
+  --surface-tertiary: 243, 243, 243;
+  --surface-elevated: 240, 240, 240;
+  --surface-muted: 233, 233, 233;
+  --border-primary: 218, 218, 218;
+  --border-secondary: 189, 189, 189;
+  --text-primary: #040507;
+  --text-secondary: #161f29;
+  --text-tertiary: #2d3945;
+  --text-muted: #646464;
+  --text-disabled: #818181;
 }
 
 @theme inline {
@@ -19,8 +31,40 @@
   }
 }
 
+.dark {
+  --surface-primary: 9, 11, 12;
+  --surface-secondary: 13, 16, 17;
+  --surface-tertiary: 18, 22, 24;
+  --surface-elevated: 23, 28, 31;
+  --surface-muted: 25, 31, 34;
+  --border-primary: 29, 36, 39;
+  --border-secondary: 58, 64, 67;
+  --text-primary: #f2ffff;
+  --text-secondary: #deeeee;
+  --text-tertiary: #d6e6e6;
+  --text-muted: #a3a3a3;
+  --text-disabled: #808080;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+}
+
+input,
+select,
+p,
+textarea,
+div {
+  color: var(--text-primary) !important;
+}
+
+button {
+  cursor: pointer;
 }

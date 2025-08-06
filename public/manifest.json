@@ -1,0 +1,69 @@
+{
+  "name": "CUET CGPA Calculator - Accurate Grade Calculation for CUET Students",
+  "short_name": "CUET CGPA Calculator",
+  "description": "Calculate, track, and plan your CGPA at Chittagong University of Engineering & Technology with our precise calculator supporting all 13 departments.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/app-icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/app-icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/app-icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "CGPA Calculator",
+      "short_name": "Calculator",
+      "description": "Calculate your semester CGPA",
+      "url": "/calculator",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "View Profile",
+      "short_name": "Profile",
+      "description": "View your academic profile and progress",
+      "url": "/profile",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "How it Works",
+      "short_name": "About",
+      "description": "Learn how CGPA calculation works",
+      "url": "/about",
+      "icons": [
+        {
+          "src": "/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

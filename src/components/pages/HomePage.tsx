@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function HomePage() {
   const router = useRouter();
   const [isChecking, setIsChecking] = useState(true);
 
@@ -21,6 +21,7 @@ export default function Home() {
   if (isChecking) {
     return <div className="flex justify-center items-center min-h-screen">Loading...</div>;
   }
+
   return (
     <div className="min-h-screen bg-[rgb(var(--surface-secondary))]">
       {/* Navigation */}

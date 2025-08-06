@@ -12,6 +12,7 @@
     "@radix-ui/react-checkbox": "^1.3.2",
     "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-select": "^2.2.5",
+    "@serwist/next": "^9.1.1",
     "@types/bcryptjs": "^2.4.6",
     "@types/nodemailer": "^6.4.17",
     "bcryptjs": "^3.0.2",

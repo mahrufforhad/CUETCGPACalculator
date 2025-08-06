@@ -71,7 +71,7 @@ export default function Home() {
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm border border-slate-200/50 px-4 py-2 rounded-full text-sm text-slate-600 mb-8 shadow-sm">
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-              Trusted by 130+ CUET students
+              Trusted by CUET students
             </div>
             
             {/* Main Heading */}

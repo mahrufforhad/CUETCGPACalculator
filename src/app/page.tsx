@@ -65,9 +65,9 @@ export default function Home() {
               </Link>
               <span className="text-xl font-bold text-slate-800">CGPA Calculator</span>
             </div>
-            <button className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-1.5 rounded-xl font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
+            <Link href={"/login"} className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-1.5 rounded-xl font-medium transition-all duration-200 hover:shadow-lg hover:scale-105">
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -106,12 +106,12 @@ export default function Home() {
                 </svg>
               </button>
               
-              <button className="inline-flex items-center justify-center bg-white/60 backdrop-blur-sm hover:bg-white/80 border border-slate-200/50 text-slate-700 font-medium py-4 px-8 rounded-2xl text-lg transition-all duration-200 hover:shadow-lg">
+              <Link href={"/about"} className="inline-flex items-center justify-center bg-white/60 backdrop-blur-sm hover:bg-white/80 border border-slate-200/50 text-slate-700 font-medium py-4 px-8 rounded-2xl text-lg transition-all duration-200 hover:shadow-lg">
                 <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
         </div>

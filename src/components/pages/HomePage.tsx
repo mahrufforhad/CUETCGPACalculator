@@ -92,7 +92,7 @@ export default function HomePage() {
       <section className="py-20 bg-[rgb(var(--surface-primary))] border-t border-[rgb(var(--border-primary))]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
               Everything you need for CGPA calculation
             </h2>
             <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
@@ -132,7 +132,7 @@ export default function HomePage() {
       <section id="features" className="py-20 bg-[rgb(var(--surface-secondary))]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4 flex items-center justify-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4 flex items-center justify-center">
               <span className="mr-3 text-4xl">⚡</span>
               Key Features of Our Calculator
             </h2>
@@ -223,7 +223,7 @@ export default function HomePage() {
       <section className="py-20 bg-[rgb(var(--surface-secondary))]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] mb-4">
               How it works
             </h2>
             <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">

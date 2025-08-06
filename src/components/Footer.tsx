@@ -75,7 +75,7 @@ export default function Footer() {
           <div className="flex flex-col justify-center space-x-6 text-sm text-[var(--text-muted)]">
             <span>Made for CUET Students</span>
             <span>© Hovered - 2024</span>
-            <span className="text-lg mt-3">Built with 🖤 by <a href="https://facebook.com/forhadhossain.me" className="!text-blue-600 font-bold underline">Forhad (CSE&apos;23)</a></span>
+            <span className="text-lg mt-3">Built with 🖤 by <a href="https://facebook.com/forhadhossain.me" target="_blank" className="!text-blue-600 font-bold underline">Forhad (CSE&apos;23)</a></span>
           </div>
         </div>
       </div>

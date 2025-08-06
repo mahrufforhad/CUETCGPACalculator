@@ -1,6 +1,7 @@
 'use client';
 
 import { Checkbox } from '@/components/ui/checkbox';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { GRADE_OPTIONS, GRADE_SYSTEM, SEMESTER_OPTIONS } from '@/lib/constants';
@@ -36,6 +37,7 @@ export default function CalculatorPage() {
   const [userData, setUserData] = useState<any>(null);
   const [isAutoSaving, setIsAutoSaving] = useState(false);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
+  const [showInstructionDialog, setShowInstructionDialog] = useState(false);
   const autoSaveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const fetchUserData = useCallback(async (email: string) => {
@@ -340,7 +342,10 @@ export default function CalculatorPage() {
                   📝 Manual Entry
                 </button>
                 <button
-                  onClick={() => setActiveTab('copypaste')}
+                  onClick={() => {
+                    setActiveTab('copypaste');
+                    setShowInstructionDialog(true);
+                  }}
                   className={`flex-1 py-3 px-6 font-semibold text-sm rounded-lg transition-all duration-200 ${
                     activeTab === 'copypaste'
                       ? 'bg-blue-600 text-white transform scale-105'
@@ -455,8 +460,8 @@ export default function CalculatorPage() {
               {activeTab === 'copypaste' && (
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Select and Paste Your Result Data from CUET Portal
+                    <label className="block text-base font-medium text-gray-700 mb-2">
+                      Select and Paste Your Result Data from <a href="https://course.cuet.ac.bd" target="_blank" className="font-bold text-blue-600 hover:underline">course.cuet.ac.bd</a>
                     </label>
                     <textarea
                       value={copyPasteText}
@@ -611,6 +616,65 @@ Math-141	3	Level 1 - Term 1	No	A-	regular"
           )}
         </div>
       </div>
+
+      {/* Instruction Dialog */}
+      <Dialog open={showInstructionDialog} onOpenChange={setShowInstructionDialog}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle>How to Copy Results from CUET Website</DialogTitle>
+            <DialogDescription>
+              Follow these steps to copy your results from the official CUET website:
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-4">
+            <div className="text-sm text-gray-700">
+              1. Visit{' '}
+              <a 
+                href="https://course.cuet.ac.bd" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="font-bold text-blue-600 hover:underline"
+              >
+                course.cuet.ac.bd
+              </a>
+              {' '}and log in to your account
+            </div>
+            
+            <div className="text-sm text-gray-700">
+              2. Navigate to your results page and select the result table as shown in the image below:
+            </div>
+            
+            <div className="border rounded-lg p-2 bg-gray-50">
+              <Image 
+                src="/assets/selection-portion-image.png" 
+                alt="How to select result table from CUET website" 
+                width={600} 
+                height={400} 
+                className="w-full h-auto rounded"
+                priority
+              />
+            </div>
+            
+            <div className="text-sm text-gray-700">
+              3. Copy the selected table data (Ctrl+C or Cmd+C)
+            </div>
+            
+            <div className="text-sm text-gray-700">
+              4. Come back to this page and paste the data in the text area
+            </div>
+            
+            <div className="flex justify-end pt-4">
+              <button
+                onClick={() => setShowInstructionDialog(false)}
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium"
+              >
+                OK, Got it!
+              </button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

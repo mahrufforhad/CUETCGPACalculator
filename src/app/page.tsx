@@ -99,12 +99,12 @@ export default function Home() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-24">
-              <button className="inline-flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 px-8 rounded-2xl text-lg transition-all duration-200 hover:shadow-xl hover:scale-105 group">
+              <Link href={"/login"} className="inline-flex items-center justify-center bg-slate-900 hover:bg-slate-800 text-white font-medium py-4 px-8 rounded-2xl text-lg transition-all duration-200 hover:shadow-xl hover:scale-105 group">
                 Start Calculating
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
               
               <Link href={"/about"} className="inline-flex items-center justify-center bg-white/60 backdrop-blur-sm hover:bg-white/80 border border-slate-200/50 text-slate-700 font-medium py-4 px-8 rounded-2xl text-lg transition-all duration-200 hover:shadow-lg">
                 <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

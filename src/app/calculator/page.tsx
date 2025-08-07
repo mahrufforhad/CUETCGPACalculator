@@ -60,6 +60,7 @@ export default function CalculatorPage() {
     }
   }, []);
 
+
   useEffect(() => {
     const email = localStorage.getItem('userEmail');
     if (!email) {
@@ -185,6 +186,8 @@ export default function CalculatorPage() {
     }
   };
 
+
+
   const autoSave = useCallback(async (coursesToSave: Course[], showToast: boolean = false) => {
     if (!selectedSemester || !userEmail) {
       return;
@@ -252,7 +255,7 @@ export default function CalculatorPage() {
         autoSave(currentCourses, false);
       }, 100);
     }
-  }, [courses, selectedSemester, userEmail, autoSave]);
+  }, [courses, selectedSemester, userEmail, autoSave, activeTab]);
 
   
   useEffect(() => {
@@ -461,7 +464,7 @@ export default function CalculatorPage() {
                 <div className="space-y-4">
                   <div>
                     <label className="block text-base font-medium text-gray-700 mb-2">
-                      Select and Paste Your Result Data from <a href="https://course.cuet.ac.bd" target="_blank" className="font-bold text-blue-600 hover:underline">course.cuet.ac.bd</a>
+                      Select and Paste Your Result Data from <a href="https://course.cuet.ac.bd/result_published.php" target="_blank" className="font-bold text-blue-600 hover:underline">course.cuet.ac.bd</a>
                     </label>
                     <textarea
                       value={copyPasteText}
@@ -481,6 +484,7 @@ Math-141	3	Level 1 - Term 1	No	A-	regular"
                   </button>
                 </div>
               )}
+
 
               {/* Course List */}
               {courses.length > 0 && (
@@ -631,7 +635,7 @@ Math-141	3	Level 1 - Term 1	No	A-	regular"
             <div className="text-sm text-gray-700">
               1. Visit{' '}
               <a 
-                href="https://course.cuet.ac.bd" 
+                href="https://course.cuet.ac.bd/result_published.php" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="font-bold text-blue-600 hover:underline"
@@ -675,6 +679,7 @@ Math-141	3	Level 1 - Term 1	No	A-	regular"
           </div>
         </DialogContent>
       </Dialog>
+
     </div>
   );
 }

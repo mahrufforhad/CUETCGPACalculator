@@ -102,15 +102,19 @@ UserSchema.methods.calculateOverallCGPA = function() {
 
   let totalGradePoints = 0;
   let totalCredits = 0;
+  let creditsForCGPA = 0;
 
   this.semesterResults.forEach((semester: ISemesterResult) => {
     semester.courses.forEach((course: ICourse) => {
       totalCredits += course.credit;
       totalGradePoints += course.credit * GRADE_SYSTEM[course.grade].point;
+      if (course.grade !== 'F') {
+        creditsForCGPA += course.credit;
+      }
     });
   });
 
-  this.overallCGPA = totalCredits > 0 ? totalGradePoints / totalCredits : 0;
+  this.overallCGPA = creditsForCGPA > 0 ? totalGradePoints / creditsForCGPA : 0;
   this.totalCredits = totalCredits;
 };
 

@@ -34,7 +34,12 @@ export function calculateSemesterCGPA(courses: Course[]): CGPACalculationResult 
     return sum + (credit * GRADE_SYSTEM[course.grade].point);
   }, 0);
   
-  const cgpa = totalCredits > 0 ? (totalGradePoints / totalCredits) : 0;
+  const creditsForCGPA = validCourses.reduce((sum, course) => {
+    const credit = typeof course.credit === 'string' ? parseFloat(course.credit) : course.credit;
+    return course.grade === 'F' ? sum : sum + credit;
+  }, 0);
+  
+  const cgpa = creditsForCGPA > 0 ? (totalGradePoints / creditsForCGPA) : 0;
   
   return {
     cgpa,

@@ -328,7 +328,7 @@ export default function AboutPage() {
                 { title: "Course Type Support", desc: "Handles regular, retake, and improvement courses correctly", icon: "📚" },
                 { title: "Target Planning", desc: "Shows required CGPA for remaining semesters to reach your goal", icon: "🎯" },
                 { title: "Input Validation", desc: "Filters invalid courses and ensures data integrity", icon: "✅" },
-                { title: "Copy-Paste Support", desc: "Import results directly from CUET portal with intelligent parsing", icon: "📋" }
+                { title: "Copy-Paste Support", desc: "Copy and paste results from CUET website with intelligent parsing", icon: "📋" }
               ].map((feature, index) => (
                 <div
                   key={index}

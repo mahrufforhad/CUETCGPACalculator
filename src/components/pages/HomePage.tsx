@@ -190,7 +190,7 @@ export default function HomePage() {
                   <span className="text-green-500 text-2xl flex-shrink-0">✓</span>
                   <div>
                     <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">Copy-Paste Support</h3>
-                    <p className="text-[var(--text-secondary)]">Import results directly from CUET portal with intelligent parsing</p>
+                    <p className="text-[var(--text-secondary)]">Copy and paste results from CUET website with intelligent parsing</p>
                   </div>
                 </div>
               </div>

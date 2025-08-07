@@ -55,7 +55,19 @@ export const metadata: Metadata = {
         alt: "CUET CGPA Calculator OG Image",
       },
     ]
-  }
+  },
+  appleWebApp: {
+    capable: true,
+    title: "CUET CGPA Calculator",
+    statusBarStyle: "black-translucent",
+  },
+  themeColor: "#2563eb",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+    shortcut: "/logo.png",
+  },
+  manifest: "/manifest.json"
 };
 
 export default function RootLayout({

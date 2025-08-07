@@ -47,17 +47,17 @@ export const calculateCGPA = (courses: Array<{ credit: number | string; grade: k
     return !isNaN(credit) && credit > 0;
   });
   
-  const totalCredits = validCourses.reduce((sum, course) => {
-    const credit = typeof course.credit === 'string' ? parseFloat(course.credit) : course.credit;
-    return sum + credit;
-  }, 0);
-  
   const totalGradePoints = validCourses.reduce((sum, course) => {
     const credit = typeof course.credit === 'string' ? parseFloat(course.credit) : course.credit;
     return sum + (credit * GRADE_SYSTEM[course.grade].point);
   }, 0);
   
-  return totalCredits > 0 ? (totalGradePoints / totalCredits) : 0;
+  const creditsForCGPA = validCourses.reduce((sum, course) => {
+    const credit = typeof course.credit === 'string' ? parseFloat(course.credit) : course.credit;
+    return course.grade === 'F' ? sum : sum + credit;
+  }, 0);
+  
+  return creditsForCGPA > 0 ? (totalGradePoints / creditsForCGPA) : 0;
 };
 
 export const CUET_EMAIL_REGEX = /^u\d{2}(01|02|03|04|05|06|07|08|09|10|11|12|13)\d{3}@student\.cuet\.ac\.bd$/;

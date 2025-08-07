@@ -229,7 +229,7 @@ export default function Home() {
                 },
                 {
                   title: "Copy-Paste Support",
-                  description: "Import results directly from CUET portal with intelligent parsing"
+                  description: "Copy and paste results from CUET website with intelligent parsing"
                 }
               ].map((feature, index) => (
                 <div
